@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # show bash pid
-echo "$(pgrep bash) bash"
+pgrep bash | while read -r pid; do
+    echo "$pid bash"
+done
